@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SessionController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FluentController;
@@ -30,3 +31,6 @@ Route::get('/delete-post/{id}',[ClientController::class,'deletePost'])->name('po
 Route::get('/fluent-string',[FluentController::class,'index'])->name('fluents.index');
 Route::get('/login',[LoginController::class,'index'])->name('login.index')->middleware('checkuser');
 Route::post('/login',[LoginController::class,'loginSubmit'])->name('login.submit');
+Route::get('/session/get',[SessionController::class,'getSessionData'])->name('session.get');
+Route::get('/session/set',[SessionController::class,'storeSession'])->name('session.set');
+Route::get('/session/remove',[SessionController::class,'deleteSessionData'])->name('session.remove');
