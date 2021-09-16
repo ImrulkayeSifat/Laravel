@@ -15,6 +15,10 @@ class LoginController extends Controller
     public function loginSubmit(Request $req)
     {
         // return "Form Submitted";
+        $validateData = $req->validate([
+            'email' =>'required|email',
+            'password'=>'required|min:6|max:12'
+        ]);
         $email = $req->input('email');
         $password = $req->input('password');
         // return $req->all();
