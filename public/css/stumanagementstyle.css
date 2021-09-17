@@ -117,6 +117,7 @@ h1 {
 .custom-select3 {
     margin-right: 120px;
 }
+
 /* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
     .sidenav {

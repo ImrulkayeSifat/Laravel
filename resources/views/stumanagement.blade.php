@@ -71,22 +71,22 @@
                 <option value="2">BMW</option>
               </select>
           </div>
-          <div class="col-sm-10 custom-select2" style="width:260px;">
+          <div class="mb-3 custom-select2" style="width:260px;">
             <input type="text" class="form-control" id="inputPassword" placeholder="User id">
           </div>
-          <div class="col-sm-10" style="width:260px;">
+          <div class="mb-3" style="width:260px;">
             <input type="text" class="form-control" id="inputPassword" placeholder="Roll No">
           </div>
         </div>
 
         <div class="fourth">
-          <div class="col-sm-10" style="width:260px;">
+          <div class="mb-3" style="width:260px;">
             <input type="text" class="form-control" id="inputPassword" placeholder="Student Name">
           </div>
-          <div class="col-sm-10" style="width:260px;">
+          <div class="mb-3" style="width:260px;">
             <input type="text" class="form-control" id="inputPassword" placeholder="Email">
           </div>
-          <div class="col-sm-10" style="width:260px;">
+          <div class="mb-3" style="width:260px;">
             <input type="text" class="form-control" id="inputPassword" placeholder="Phone">
           </div>
         </div>

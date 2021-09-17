@@ -9,6 +9,9 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
+//database
+use App\Http\Controllers\PostController;
+
 // for frontend design
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\DashboardController;
@@ -51,3 +54,5 @@ Route::get('/session/get',[SessionController::class,'getSessionData'])->name('se
 Route::get('/session/set',[SessionController::class,'storeSession'])->name('session.set');
 Route::get('/session/remove',[SessionController::class,'deleteSessionData'])->name('session.remove');
 
+//database
+Route::get('/posts',[PostController::class,'getAllPost'])->name('post.getAllPost');
