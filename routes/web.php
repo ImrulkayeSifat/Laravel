@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginationController;
+use App\Http\Controllers\UploadController;
 
 //database
 use App\Http\Controllers\PostController;
@@ -81,3 +82,7 @@ Route::get('/about',function(){
 });
 
 Route::get('/all-users',[PaginationController::class,'allUsers']);
+
+Route::get('/upload',[UploadController::class,'uploadForm']);
+
+Route::post('/upload',[UploadController::class,'uploadFile'])->name('upload.uploadFile');
