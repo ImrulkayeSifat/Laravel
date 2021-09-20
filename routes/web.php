@@ -8,6 +8,7 @@ use App\Http\Controllers\FluentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PaginationController;
 
 //database
 use App\Http\Controllers\PostController;
@@ -78,3 +79,5 @@ Route::get('/index',function(){
 Route::get('/about',function(){
   return view('about');
 });
+
+Route::get('/all-users',[PaginationController::class,'allUsers']);
