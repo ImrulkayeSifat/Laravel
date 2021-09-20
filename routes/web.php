@@ -66,3 +66,4 @@ Route::post('/update-post',[PostController::class,'updatePost'])->name('post.upd
 Route::get('/inner-join',[PostController::class,'innerJoinClause'])->name('post.innerjoin');
 Route::get('/left-join',[PostController::class,'leftJoinClause'])->name('post.leftJoinClause');
 Route::get('/right-join',[PostController::class,'rightJoinClause'])->name('post.rightJoinClause');
+Route::get('/all-posts',[PostController::class,'getAllPostUsingModel'])->name('post.getAllPostUsingModel');
