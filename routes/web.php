@@ -40,6 +40,10 @@ Route::get('/front/users',[UserManaController::class,'create'])->name('users.cre
 Route::get('/front/usergroup',[UsergroupController::class,'create'])->name('usergroup.create');
 Route::get('/front/sesmanagement',[SesmanagementController::class,'create'])->name('sesmanagement.create');
 //
+Route::get('/lang/{locate}',function($locale){
+  App::setLocale($locale);
+  return view('welcome1');
+});
 Route::get('/',[ProductController::class,'index'])->name('product.index');
 Route::get('/home/{name?}',[HomeController::class,'index'])->name('home.index');
 Route::get('/user',[UserController::class,'index'])->name('user.index');
