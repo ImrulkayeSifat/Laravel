@@ -21,6 +21,7 @@ use App\Http\Controllers\SesmanagementController;
 use App\Http\Controllers\StumanagementController;
 use App\Http\Controllers\UsergroupController;
 use App\Http\Controllers\UserManaController;
+use App\PaymentGateway\Payment;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -90,3 +91,10 @@ Route::get('/all-users',[PaginationController::class,'allUsers']);
 Route::get('/upload',[UploadController::class,'uploadForm']);
 
 Route::post('/upload',[UploadController::class,'uploadFile'])->name('upload.uploadFile');
+
+Route::get('/my-name',function(){
+  // $user = new \App\MyCurrentLibraries\User();
+  // $user->myName();
+
+  MyUser::myName();// scope-resolution
+});
