@@ -2,6 +2,7 @@
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\BidController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StController;
 use App\Http\Controllers\ClientController;
@@ -107,3 +108,8 @@ Route::get('/students',[StController::class,'fetchStudents']);
 
 Route::get('/addUser',[UsersController::class,'inserRecord']);
 Route::get('/get-phone/{id}',[UsersController::class,'fetchPhoneByUser']);
+
+Route::get('/addBid',[BidController::class,'addBid']);
+Route::get('/add-comment/{id}',[BidController::class,'addComment']);
+
+Route::get('/get-comments/{id}',[BidController::class,'getCommentsByPost']);
