@@ -2,6 +2,8 @@
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\StController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\FluentController;
@@ -98,3 +100,10 @@ Route::get('/my-name',function(){
 
   MyUser::myName();// scope-resolution
 });
+
+Route::get('/students',[StController::class,'fetchStudents']);
+
+//Relation Database
+
+Route::get('/addUser',[UsersController::class,'inserRecord']);
+Route::get('/get-phone/{id}',[UsersController::class,'fetchPhoneByUser']);
