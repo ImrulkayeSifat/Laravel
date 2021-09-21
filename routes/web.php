@@ -2,6 +2,7 @@
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\StController;
@@ -113,3 +114,8 @@ Route::get('/addBid',[BidController::class,'addBid']);
 Route::get('/add-comment/{id}',[BidController::class,'addComment']);
 
 Route::get('/get-comments/{id}',[BidController::class,'getCommentsByPost']);
+
+Route::get('/add-roles',[RoleController::class,'addRole']);
+Route::get('/add-users',[RoleController::class,'addUser']);
+Route::get('/rolesbyuser/{id}',[RoleController::class,'getAllRolesByUser']);
+Route::get('/userbyrole/{id}',[RoleController::class,'getAllUsersByRole']);
